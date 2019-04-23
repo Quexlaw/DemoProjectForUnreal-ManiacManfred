@@ -15,6 +15,10 @@ class IManiacManfredMethodsProvider
 	
 public:
 	
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta=(DisplayName="TestPrint2"))
+	void TestPrint2() ;
+	virtual void TestPrint2_Implementation() {  };
+	
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, meta=(DisplayName="restart"))
 	void restart() ;
 	virtual void restart_Implementation() {  };
@@ -27,6 +31,12 @@ class UManiacManfredExpressoScripts : public UArticyExpressoScripts
 	
 private:
 	
+	void TestPrint2() const
+	{
+		auto methodProvider = GetUserMethodsProviderObject();
+		if(!methodProvider) return ;
+		IManiacManfredMethodsProvider::Execute_TestPrint2(methodProvider);
+	}
 	void restart() const
 	{
 		auto methodProvider = GetUserMethodsProviderObject();
@@ -666,6 +676,11 @@ public:
 			return ConditionOrTrue(
 				(*Inventory->bomb)
 			);
+		});
+		Instructions.Add(-923831267, [&]
+		{
+			(*Inventory->numBanana) +=1;
+ TestPrint2();
 		});
 		Conditions.Add(227797041, [&]
 		{

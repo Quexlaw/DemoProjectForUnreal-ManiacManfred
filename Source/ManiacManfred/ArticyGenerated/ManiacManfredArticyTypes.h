@@ -5,6 +5,7 @@
 
 #include "CoreUObject.h"
 #include "ArticyRuntime/Public/ArticyBaseInclude.h"
+#include "ManiacManfredInterfaces.h"
 #include "ManiacManfredArticyTypes.generated.h"
 
 
@@ -55,6 +56,17 @@ class EManiacManfredSelectabilityModes : uint8
 
 UENUM(BlueprintType)
 enum
+/** UENUM generated form ArticyObjectDef VisibilityModes */
+class EManiacManfredVisibilityModes : uint8
+{
+	Invisible = 0,
+	Visible = 1,
+};
+
+/** -------------------------------------------------------------------------------- */
+
+UENUM(BlueprintType)
+enum
 /** UENUM generated form ArticyObjectDef OutlineStyle */
 class EManiacManfredOutlineStyle : uint8
 {
@@ -63,17 +75,6 @@ class EManiacManfredOutlineStyle : uint8
 	Dash = 2,
 	DashDot = 3,
 	DashDotDot = 4,
-};
-
-/** -------------------------------------------------------------------------------- */
-
-UENUM(BlueprintType)
-enum
-/** UENUM generated form ArticyObjectDef VisibilityModes */
-class EManiacManfredVisibilityModes : uint8
-{
-	Invisible = 0,
-	Visible = 1,
 };
 
 /** -------------------------------------------------------------------------------- */
@@ -283,12 +284,24 @@ public:
 };
 /** UCLASS generated from ArticyObjectDef DialogChoice */
 UCLASS(BlueprintType)
-class UManiacManfredDialogChoice : public UManiacManfredDialogueFragment
+class UManiacManfredDialogChoice : public UManiacManfredDialogueFragment,
+ public IManiacManfredObjectWithSoundfileFeature,
+ public IManiacManfredObjectWithDialogChoiceFeature
 {
 	GENERATED_BODY()
 	
 public:
 	
+	/** IManiacManfredObjectWithSoundfileFeature implementation */
+	UManiacManfredSoundfileFeature* GetFeatureSoundfile() const override
+	{
+		return Soundfile;
+	}
+	/** IManiacManfredObjectWithDialogChoiceFeature implementation */
+	UManiacManfredDialogChoiceFeature* GetFeatureDialogChoice() const override
+	{
+		return DialogChoice;
+	}
 	/** Soundfile */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	UManiacManfredSoundfileFeature* Soundfile;
@@ -455,6 +468,27 @@ public:
 
 /** -------------------------------------------------------------------------------- */
 
+/** UCLASS generated from Articy Item Feature */
+UCLASS(BlueprintType)
+class UManiacManfredItemFeature : public UArticyBaseFeature
+{
+	GENERATED_BODY()
+	
+public:
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(DisplayName="Item Description"))
+	FString MediumTextValue = TEXT("");
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(DisplayName="Consumable"))
+	bool BooleanValue = false;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(DisplayName="Equipable"))
+	bool BooleanValue_02 = false;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(DisplayName="Stackable"))
+	bool BooleanValue_03 = false;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(DisplayName="Script (medium)"))
+	UArticyScriptInstruction* MediumScriptValue = nullptr;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta=(DisplayName="Text (small)"))
+	FString MeshPath = TEXT("");
+};
 /** UCLASS generated from Articy ItemCombination Feature */
 UCLASS(BlueprintType)
 class UManiacManfredItemCombinationFeature : public UArticyBaseFeature
@@ -485,12 +519,33 @@ public:
 };
 /** UCLASS generated from ArticyObjectDef Item */
 UCLASS(BlueprintType)
-class UManiacManfredItem : public UManiacManfredEntity
+class UManiacManfredItem : public UManiacManfredEntity,
+ public IManiacManfredObjectWithItemFeature,
+ public IManiacManfredObjectWithItemCombinationFeature,
+ public IManiacManfredObjectWithVariableBindingFeature
 {
 	GENERATED_BODY()
 	
 public:
 	
+	/** IManiacManfredObjectWithItemFeature implementation */
+	UManiacManfredItemFeature* GetFeatureItem() const override
+	{
+		return Item;
+	}
+	/** IManiacManfredObjectWithItemCombinationFeature implementation */
+	UManiacManfredItemCombinationFeature* GetFeatureItemCombination() const override
+	{
+		return ItemCombination;
+	}
+	/** IManiacManfredObjectWithVariableBindingFeature implementation */
+	UManiacManfredVariableBindingFeature* GetFeatureVariableBinding() const override
+	{
+		return VariableBinding;
+	}
+	/** Item */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	UManiacManfredItemFeature* Item;
 	/** ItemCombination */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	UManiacManfredItemCombinationFeature* ItemCombination;
@@ -528,12 +583,18 @@ public:
 };
 /** UCLASS generated from ArticyObjectDef Character */
 UCLASS(BlueprintType)
-class UManiacManfredCharacter : public UManiacManfredEntity
+class UManiacManfredCharacter : public UManiacManfredEntity,
+ public IManiacManfredObjectWithCharacterFeature
 {
 	GENERATED_BODY()
 	
 public:
 	
+	/** IManiacManfredObjectWithCharacterFeature implementation */
+	UManiacManfredCharacterFeature* GetFeatureCharacter() const override
+	{
+		return Character;
+	}
 	/** Character */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	UManiacManfredCharacterFeature* Character;
@@ -554,12 +615,24 @@ public:
 };
 /** UCLASS generated from ArticyObjectDef Player_Character */
 UCLASS(BlueprintType)
-class UManiacManfredPlayer_Character : public UManiacManfredEntity
+class UManiacManfredPlayer_Character : public UManiacManfredEntity,
+ public IManiacManfredObjectWithMoraleFeature,
+ public IManiacManfredObjectWithCharacterFeature
 {
 	GENERATED_BODY()
 	
 public:
 	
+	/** IManiacManfredObjectWithMoraleFeature implementation */
+	UManiacManfredMoraleFeature* GetFeatureMorale() const override
+	{
+		return Morale;
+	}
+	/** IManiacManfredObjectWithCharacterFeature implementation */
+	UManiacManfredCharacterFeature* GetFeatureCharacter() const override
+	{
+		return Character;
+	}
 	/** Morale */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	UManiacManfredMoraleFeature* Morale;
@@ -631,12 +704,24 @@ public:
 };
 /** UCLASS generated from ArticyObjectDef LocationSettings */
 UCLASS(BlueprintType)
-class UManiacManfredLocationSettings : public UManiacManfredLocation
+class UManiacManfredLocationSettings : public UManiacManfredLocation,
+ public IManiacManfredObjectWithSoundfileFeature,
+ public IManiacManfredObjectWithLocationSettingsFeature
 {
 	GENERATED_BODY()
 	
 public:
 	
+	/** IManiacManfredObjectWithSoundfileFeature implementation */
+	UManiacManfredSoundfileFeature* GetFeatureSoundfile() const override
+	{
+		return Soundfile;
+	}
+	/** IManiacManfredObjectWithLocationSettingsFeature implementation */
+	UManiacManfredLocationSettingsFeature* GetFeatureLocationSettings() const override
+	{
+		return LocationSettings;
+	}
 	/** Soundfile */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	UManiacManfredSoundfileFeature* Soundfile;
@@ -799,12 +884,18 @@ public:
 };
 /** UCLASS generated from ArticyObjectDef Conditional_Zone */
 UCLASS(BlueprintType)
-class UManiacManfredConditional_Zone : public UManiacManfredZone
+class UManiacManfredConditional_Zone : public UManiacManfredZone,
+ public IManiacManfredObjectWithZoneConditionFeature
 {
 	GENERATED_BODY()
 	
 public:
 	
+	/** IManiacManfredObjectWithZoneConditionFeature implementation */
+	UManiacManfredZoneConditionFeature* GetFeatureZoneCondition() const override
+	{
+		return ZoneCondition;
+	}
 	/** ZoneCondition */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	UManiacManfredZoneConditionFeature* ZoneCondition;
@@ -971,12 +1062,18 @@ public:
 
 /** UCLASS generated from ArticyObjectDef BackgroundImage */
 UCLASS(BlueprintType)
-class UManiacManfredBackgroundImage : public UManiacManfredAsset
+class UManiacManfredBackgroundImage : public UManiacManfredAsset,
+ public IManiacManfredObjectWithVariableBindingFeature
 {
 	GENERATED_BODY()
 	
 public:
 	
+	/** IManiacManfredObjectWithVariableBindingFeature implementation */
+	UManiacManfredVariableBindingFeature* GetFeatureVariableBinding() const override
+	{
+		return VariableBinding;
+	}
 	/** VariableBinding */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	UManiacManfredVariableBindingFeature* VariableBinding;
@@ -1217,12 +1314,18 @@ public:
 };
 /** UCLASS generated from ArticyObjectDef DisplayCondition */
 UCLASS(BlueprintType)
-class UManiacManfredDisplayCondition : public UManiacManfredLocationImage
+class UManiacManfredDisplayCondition : public UManiacManfredLocationImage,
+ public IManiacManfredObjectWithDisplayConditionFeature
 {
 	GENERATED_BODY()
 	
 public:
 	
+	/** IManiacManfredObjectWithDisplayConditionFeature implementation */
+	UManiacManfredDisplayConditionFeature* GetFeatureDisplayCondition() const override
+	{
+		return DisplayCondition;
+	}
 	/** DisplayCondition */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	UManiacManfredDisplayConditionFeature* DisplayCondition;

@@ -218,6 +218,9 @@ public:
 	/** True after finding the sleeping pills in the lobby. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Instanced, Category="Inventory")
 	UArticyBool* sleepingPills = nullptr;
+	/** How Many Bananas U Got */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Instanced, Category="Inventory")
+	UArticyInt* numBanana = nullptr;
 	
 	 UManiacManfredInventoryVariables() 
 	{
@@ -236,6 +239,7 @@ public:
 		bananaPill = CreateDefaultSubobject<UArticyBool>("bananaPill");
 		banana = CreateDefaultSubobject<UArticyBool>("banana");
 		sleepingPills = CreateDefaultSubobject<UArticyBool>("sleepingPills");
+		numBanana = CreateDefaultSubobject<UArticyInt>("numBanana");
 	}
 	
 	void Init(UArticyGlobalVariables* const Store) 
@@ -271,6 +275,8 @@ public:
 		this->Variables.Add(banana);
 		sleepingPills->Init<UArticyBool>(this, Store, TEXT("Inventory.sleepingPills"), false);
 		this->Variables.Add(sleepingPills);
+		numBanana->Init<UArticyInt>(this, Store, TEXT("Inventory.numBanana"), 0);
+		this->Variables.Add(numBanana);
 	}
 };
 
