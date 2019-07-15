@@ -5,8 +5,8 @@
     "set_IncludedNodes": "Settings, Project, GlobalVariables, ObjectDefinitions, Packages, ScriptMethods, Hierarchy, Assets",
     "set_UseScriptSupport": "True",
     "ExportVersion": "0.1",
-    "ObjectDefinitionsHash": "08642714B275B4ED1B7E7FE9025FDC715ED1FD84D8F50DD36B8CC8EF17622897",
-    "ScriptFragmentsHash": "1691008398"
+    "ObjectDefinitionsHash": "C661679CCB04C2F243578A42FE773C95F6A231F124070B252EEAC8747424CAD7",
+    "ScriptFragmentsHash": "1536852180"
   },
   "Project": {
     "Name": "Maniac Manfred 3.0",
@@ -264,6 +264,18 @@
           "Type": "Integer",
           "Value": "0",
           "Description": "How Many Bananas U Got"
+        },
+        {
+          "Variable": "testVar1",
+          "Type": "Integer",
+          "Value": "0",
+          "Description": ""
+        },
+        {
+          "Variable": "testVar2",
+          "Type": "Integer",
+          "Value": "0",
+          "Description": ""
         }
       ]
     }
@@ -1407,7 +1419,6 @@
                   "None"
                 ],
                 "AllowedModelTemplates": [
-                  "Character",
                   "Player_Character"
                 ]
               },
@@ -2975,7 +2986,7 @@
   ],
   "Packages": [
     {
-      "Name": "Only Dialogue",
+      "Name": "Package 1",
       "Description": "",
       "IsDefaultPackage": true,
       "Models": [
@@ -4771,7 +4782,7 @@
       ]
     },
     {
-      "Name": "Everything except Dialogue",
+      "Name": "Package 2",
       "Description": "",
       "IsDefaultPackage": false,
       "Models": [
@@ -5965,7 +5976,7 @@
               "g": 0.7605245,
               "b": 0.7991027
             },
-            "Text": "Oh my dear, you're recovering from the anaesthesia. How are you feeling?",
+            "Text": "Ooooooh my dear, you're recovering from the anaesthesia. How are you feeling?",
             "ExternalId": "",
             "Position": {
               "x": 113.233686641564,
@@ -8211,9 +8222,9 @@
                   {
                     "Color": {
                       "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
                     },
                     "Label": "",
                     "TargetPin": "0x1000001000004DE",
@@ -8234,9 +8245,9 @@
             "StageDirections": "",
             "Speaker": "0x1000001000010C6",
             "Color": {
-              "r": 0.5764706,
-              "g": 0.75686276,
-              "b": 0.8
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
             },
             "Text": "I guess I need a magic potion to shrink myself and escape through he keyhole... or I manage to get the key, but that sounds rather ridiculous.",
             "ExternalId": "",
@@ -8266,9 +8277,9 @@
                   {
                     "Color": {
                       "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
                     },
                     "Label": "",
                     "TargetPin": "0x1000001000004B4",
@@ -17919,7 +17930,7 @@
             ],
             "OutputPins": [
               {
-                "Text": "GameState.lock_number += 1",
+                "Text": "GameState.lock_number++;",
                 "Id": "0x100000000000CAC",
                 "Owner": "0x100000000000CA9",
                 "Connections": [
@@ -33025,6 +33036,18 @@
               },
               {
                 "Id": "0x100000000003685",
+                "TechnicalName": "",
+                "Type": "RuleSetPackage"
+              }
+            ]
+          },
+          {
+            "Id": "0x100000000003688",
+            "TechnicalName": "",
+            "Type": "RuleSet",
+            "Children": [
+              {
+                "Id": "0x10000000000368B",
                 "TechnicalName": "",
                 "Type": "RuleSetPackage"
               }
