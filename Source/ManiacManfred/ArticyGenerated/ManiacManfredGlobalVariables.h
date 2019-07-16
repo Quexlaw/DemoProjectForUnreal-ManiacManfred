@@ -221,6 +221,10 @@ public:
 	/** How Many Bananas U Got */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Instanced, Category="Inventory")
 	UArticyInt* numBanana = nullptr;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Instanced, Category="Inventory")
+	UArticyInt* testVar1 = nullptr;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Instanced, Category="Inventory")
+	UArticyInt* testVar2 = nullptr;
 	
 	 UManiacManfredInventoryVariables() 
 	{
@@ -240,6 +244,8 @@ public:
 		banana = CreateDefaultSubobject<UArticyBool>("banana");
 		sleepingPills = CreateDefaultSubobject<UArticyBool>("sleepingPills");
 		numBanana = CreateDefaultSubobject<UArticyInt>("numBanana");
+		testVar1 = CreateDefaultSubobject<UArticyInt>("testVar1");
+		testVar2 = CreateDefaultSubobject<UArticyInt>("testVar2");
 	}
 	
 	void Init(UArticyGlobalVariables* const Store) 
@@ -277,6 +283,10 @@ public:
 		this->Variables.Add(sleepingPills);
 		numBanana->Init<UArticyInt>(this, Store, TEXT("Inventory.numBanana"), 0);
 		this->Variables.Add(numBanana);
+		testVar1->Init<UArticyInt>(this, Store, TEXT("Inventory.testVar1"), 0);
+		this->Variables.Add(testVar1);
+		testVar2->Init<UArticyInt>(this, Store, TEXT("Inventory.testVar2"), 0);
+		this->Variables.Add(testVar2);
 	}
 };
 

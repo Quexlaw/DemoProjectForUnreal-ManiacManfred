@@ -619,9 +619,9 @@ public:
 				(*GameState->lock_number) < 4
 			);
 		});
-		Instructions.Add(729650942, [&]
+		Instructions.Add(635247511, [&]
 		{
-			(*GameState->lock_number) += 1;
+			(*GameState->lock_number)++;
 		});
 		Conditions.Add(-80824049, [&]
 		{
