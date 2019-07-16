@@ -2986,422 +2986,9 @@
   ],
   "Packages": [
     {
-      "Name": "Only Flow",
+      "Name": "Package 1",
       "Description": "",
       "IsDefaultPackage": true,
-      "Models": [
-        {
-          "Type": "FlowFragment",
-          "Properties": {
-            "TechnicalName": "FFr_Cell",
-            "Id": "0x10000010000029E",
-            "Parent": "0x300000043CE43F7",
-            "Attachments": [
-              "0x1000001000010D9"
-            ],
-            "DisplayName": "Cell",
-            "PreviewImage": {
-              "ViewBox": {
-                "x": 0.0,
-                "y": 0.0,
-                "w": 0.0,
-                "h": 0.0
-              },
-              "Mode": "FromAsset",
-              "Asset": "0x100000000001268"
-            },
-            "Color": {
-              "r": 0.577580452,
-              "g": 0.7605245,
-              "b": 0.7991027
-            },
-            "Text": "Manfred wakes up in a padded cell without any memory how he got there. With him is Dr. Artie Cee, who is absolutely convinced that Manfred is insane and needs professional help. But will Manfred cooperate?",
-            "ExternalId": "",
-            "Position": {
-              "x": 75.0,
-              "y": 425.0
-            },
-            "ZIndex": 1.0,
-            "Size": {
-              "w": 275.0,
-              "h": 200.0
-            },
-            "ShortId": 2325892332,
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x1000001000002A3",
-                "Owner": "0x10000010000029E",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.577580452,
-                      "g": 0.7605245,
-                      "b": 0.7991027
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000000000381",
-                    "Target": "0x10000000000037F"
-                  }
-                ]
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x1000001000002A4",
-                "Owner": "0x10000010000029E",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.577580452,
-                      "g": 0.7605245,
-                      "b": 0.7991027
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000100000B97",
-                    "Target": "0x100000100000B92"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "Type": "FlowFragment",
-          "Properties": {
-            "TechnicalName": "FFr_Corridor",
-            "Id": "0x100000100000B92",
-            "Parent": "0x300000043CE43F7",
-            "Attachments": [
-              "0x1000001000010C0"
-            ],
-            "DisplayName": "Corridor",
-            "PreviewImage": {
-              "ViewBox": {
-                "x": 0.0,
-                "y": 0.0,
-                "w": 0.0,
-                "h": 0.0
-              },
-              "Mode": "FromAsset",
-              "Asset": "0x10000010000142A"
-            },
-            "Color": {
-              "r": 0.577580452,
-              "g": 0.7605245,
-              "b": 0.7991027
-            },
-            "Text": "Manfred managed to escape his cell, but he's still inside the mental home. In the corridor he has to choose whether he wants to take the direct route through the lobby or if he wants to try his luck in the cellar.",
-            "ExternalId": "",
-            "Position": {
-              "x": 425.0,
-              "y": 425.0
-            },
-            "ZIndex": 2.0,
-            "Size": {
-              "w": 275.0,
-              "h": 200.0
-            },
-            "ShortId": 3230603441,
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000100000B97",
-                "Owner": "0x100000100000B92",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.577580452,
-                      "g": 0.7605245,
-                      "b": 0.7991027
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000100000BA2",
-                    "Target": "0x100000100000B9E"
-                  }
-                ]
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000100000B98",
-                "Owner": "0x100000100000B92",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.0,
-                      "g": 0.428690523,
-                      "b": 0.07818743
-                    },
-                    "Label": "Try to help the unknown person in the cellar.",
-                    "TargetPin": "0x100000100000811",
-                    "Target": "0x10000010000080C"
-                  },
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 1.0,
-                      "g": 1.0,
-                      "b": 0.0
-                    },
-                    "Label": "Ignore the cry for help and enter the lobby.",
-                    "TargetPin": "0x100000100000513",
-                    "Target": "0x10000010000050E"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "Type": "FlowFragment",
-          "Properties": {
-            "TechnicalName": "FFr_Cellar",
-            "Id": "0x10000010000080C",
-            "Parent": "0x300000043CE43F7",
-            "Attachments": [
-              "0x1000001000010CD"
-            ],
-            "DisplayName": "Cellar",
-            "PreviewImage": {
-              "ViewBox": {
-                "x": 0.0,
-                "y": 0.0,
-                "w": 0.0,
-                "h": 0.0
-              },
-              "Mode": "FromAsset",
-              "Asset": "0x1000000000012AA"
-            },
-            "Color": {
-              "r": 0.577580452,
-              "g": 0.7605245,
-              "b": 0.7991027
-            },
-            "Text": "A hamster turns out to be the only living being in the cellar. The way back is closed, so Manfred needs to be \"creative\" to escape the looney bin.",
-            "ExternalId": "",
-            "Position": {
-              "x": 875.0,
-              "y": 575.0
-            },
-            "ZIndex": 4.0,
-            "Size": {
-              "w": 275.0,
-              "h": 200.0
-            },
-            "ShortId": 3486070210,
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000100000811",
-                "Owner": "0x10000010000080C",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.577580452,
-                      "g": 0.7605245,
-                      "b": 0.7991027
-                    },
-                    "Label": "",
-                    "TargetPin": "0x10000010000081A",
-                    "Target": "0x100000100000818"
-                  }
-                ]
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000100000812",
-                "Owner": "0x10000010000080C",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.577580452,
-                      "g": 0.7605245,
-                      "b": 0.7991027
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000100000C42",
-                    "Target": "0x100000100000C3C"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "Type": "FlowFragment",
-          "Properties": {
-            "TechnicalName": "FFr_TheEnd",
-            "Id": "0x100000100000C3C",
-            "Parent": "0x300000043CE43F7",
-            "Attachments": [
-              "0x10000010000149A",
-              "0x100000100001488"
-            ],
-            "DisplayName": "The End",
-            "PreviewImage": {
-              "ViewBox": {
-                "x": 0.0,
-                "y": 0.0,
-                "w": 0.0,
-                "h": 0.0
-              },
-              "Mode": "FromAsset",
-              "Asset": "0x100000100001491"
-            },
-            "Color": {
-              "r": 0.577580452,
-              "g": 0.7605245,
-              "b": 0.7991027
-            },
-            "Text": "Manfred managed to escape the sanitarium somehow. Now is judgement day!",
-            "ExternalId": "",
-            "Position": {
-              "x": 1325.0,
-              "y": 425.0
-            },
-            "ZIndex": 8.0,
-            "Size": {
-              "w": 275.0,
-              "h": 200.0
-            },
-            "ShortId": 1292986767,
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000100000C42",
-                "Owner": "0x100000100000C3C",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.577580452,
-                      "g": 0.7605245,
-                      "b": 0.7991027
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000100000C4B",
-                    "Target": "0x100000100000C49"
-                  }
-                ]
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000100000C43",
-                "Owner": "0x100000100000C3C"
-              }
-            ]
-          }
-        },
-        {
-          "Type": "FlowFragment",
-          "Properties": {
-            "TechnicalName": "FFr_Lobby",
-            "Id": "0x10000010000050E",
-            "Parent": "0x300000043CE43F7",
-            "Attachments": [
-              "0x1000001000010D9",
-              "0x1000001000010D3"
-            ],
-            "DisplayName": "Lobby",
-            "PreviewImage": {
-              "ViewBox": {
-                "x": 0.0,
-                "y": 0.0,
-                "w": 0.0,
-                "h": 0.0
-              },
-              "Mode": "FromAsset",
-              "Asset": "0x10000000000125C"
-            },
-            "Color": {
-              "r": 0.577580452,
-              "g": 0.7605245,
-              "b": 0.7991027
-            },
-            "Text": "Depending on Manfred's decision in the cell, he either needs to get past the Guard or Dr. Artie Cee (again).",
-            "ExternalId": "",
-            "Position": {
-              "x": 875.0,
-              "y": 275.0
-            },
-            "ZIndex": 6.0,
-            "Size": {
-              "w": 275.0,
-              "h": 200.0
-            },
-            "ShortId": 1041478724,
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000100000513",
-                "Owner": "0x10000010000050E",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.577580452,
-                      "g": 0.7605245,
-                      "b": 0.7991027
-                    },
-                    "Label": "",
-                    "TargetPin": "0x10000010000051E",
-                    "Target": "0x10000010000051A"
-                  },
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.577580452,
-                      "g": 0.7605245,
-                      "b": 0.7991027
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000100000692",
-                    "Target": "0x10000010000068E"
-                  }
-                ]
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x100000100000514",
-                "Owner": "0x10000010000050E",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.577580452,
-                      "g": 0.7605245,
-                      "b": 0.7991027
-                    },
-                    "Label": "",
-                    "TargetPin": "0x100000100000C42",
-                    "Target": "0x100000100000C3C"
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "Name": "Everything except Flow",
-      "Description": "",
-      "IsDefaultPackage": false,
       "Models": [
         {
           "Type": "Dialogue",
@@ -5191,6 +4778,419 @@
               }
             ]
           }
+        }
+      ]
+    },
+    {
+      "Name": "Package 2",
+      "Description": "",
+      "IsDefaultPackage": false,
+      "Models": [
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_Cell",
+            "Id": "0x10000010000029E",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [
+              "0x1000001000010D9"
+            ],
+            "DisplayName": "Cell",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x100000000001268"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Manfred wakes up in a padded cell without any memory how he got there. With him is Dr. Artie Cee, who is absolutely convinced that Manfred is insane and needs professional help. But will Manfred cooperate?",
+            "ExternalId": "",
+            "Position": {
+              "x": 75.0,
+              "y": 425.0
+            },
+            "ZIndex": 1.0,
+            "Size": {
+              "w": 275.0,
+              "h": 200.0
+            },
+            "ShortId": 2325892332,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000001000002A3",
+                "Owner": "0x10000010000029E",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000381",
+                    "Target": "0x10000000000037F"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000001000002A4",
+                "Owner": "0x10000010000029E",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000100000B97",
+                    "Target": "0x100000100000B92"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_Corridor",
+            "Id": "0x100000100000B92",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [
+              "0x1000001000010C0"
+            ],
+            "DisplayName": "Corridor",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x10000010000142A"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Manfred managed to escape his cell, but he's still inside the mental home. In the corridor he has to choose whether he wants to take the direct route through the lobby or if he wants to try his luck in the cellar.",
+            "ExternalId": "",
+            "Position": {
+              "x": 425.0,
+              "y": 425.0
+            },
+            "ZIndex": 2.0,
+            "Size": {
+              "w": 275.0,
+              "h": 200.0
+            },
+            "ShortId": 3230603441,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000100000B97",
+                "Owner": "0x100000100000B92",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000100000BA2",
+                    "Target": "0x100000100000B9E"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000100000B98",
+                "Owner": "0x100000100000B92",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.0,
+                      "g": 0.428690523,
+                      "b": 0.07818743
+                    },
+                    "Label": "Try to help the unknown person in the cellar.",
+                    "TargetPin": "0x100000100000811",
+                    "Target": "0x10000010000080C"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 1.0,
+                      "g": 1.0,
+                      "b": 0.0
+                    },
+                    "Label": "Ignore the cry for help and enter the lobby.",
+                    "TargetPin": "0x100000100000513",
+                    "Target": "0x10000010000050E"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_Cellar",
+            "Id": "0x10000010000080C",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [
+              "0x1000001000010CD"
+            ],
+            "DisplayName": "Cellar",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x1000000000012AA"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "A hamster turns out to be the only living being in the cellar. The way back is closed, so Manfred needs to be \"creative\" to escape the looney bin.",
+            "ExternalId": "",
+            "Position": {
+              "x": 875.0,
+              "y": 575.0
+            },
+            "ZIndex": 4.0,
+            "Size": {
+              "w": 275.0,
+              "h": 200.0
+            },
+            "ShortId": 3486070210,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000100000811",
+                "Owner": "0x10000010000080C",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000010000081A",
+                    "Target": "0x100000100000818"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000100000812",
+                "Owner": "0x10000010000080C",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000100000C42",
+                    "Target": "0x100000100000C3C"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_TheEnd",
+            "Id": "0x100000100000C3C",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [
+              "0x10000010000149A",
+              "0x100000100001488"
+            ],
+            "DisplayName": "The End",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x100000100001491"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Manfred managed to escape the sanitarium somehow. Now is judgement day!",
+            "ExternalId": "",
+            "Position": {
+              "x": 1325.0,
+              "y": 425.0
+            },
+            "ZIndex": 8.0,
+            "Size": {
+              "w": 275.0,
+              "h": 200.0
+            },
+            "ShortId": 1292986767,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000100000C42",
+                "Owner": "0x100000100000C3C",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000100000C4B",
+                    "Target": "0x100000100000C49"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000100000C43",
+                "Owner": "0x100000100000C3C"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_Lobby",
+            "Id": "0x10000010000050E",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [
+              "0x1000001000010D9",
+              "0x1000001000010D3"
+            ],
+            "DisplayName": "Lobby",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x10000000000125C"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Depending on Manfred's decision in the cell, he either needs to get past the Guard or Dr. Artie Cee (again).",
+            "ExternalId": "",
+            "Position": {
+              "x": 875.0,
+              "y": 275.0
+            },
+            "ZIndex": 6.0,
+            "Size": {
+              "w": 275.0,
+              "h": 200.0
+            },
+            "ShortId": 1041478724,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000100000513",
+                "Owner": "0x10000010000050E",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000010000051E",
+                    "Target": "0x10000010000051A"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000100000692",
+                    "Target": "0x10000010000068E"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000100000514",
+                "Owner": "0x10000010000050E",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000100000C42",
+                    "Target": "0x100000100000C3C"
+                  }
+                ]
+              }
+            ]
+          }
         },
         {
           "Type": "DialogueFragment",
@@ -5976,7 +5976,7 @@
               "g": 0.7605245,
               "b": 0.7991027
             },
-            "Text": "Oh my dear, you're recovering from the anaesthesia. How are you feeling?",
+            "Text": "oh my dear, you're recovering from the anaesthesia. How are you feeling?",
             "ExternalId": "",
             "Position": {
               "x": 113.233686641564,
